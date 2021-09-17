@@ -9,7 +9,7 @@ package BAI_1_LAMQUENVOIJAVA;
  *
  * @author Dungna89
  */
-public class S2_KhaiBaoBien {
+public class B2_KhaiBaoBien {
 
   /*
       *********** Biến khái niệm cơ bản ***********
