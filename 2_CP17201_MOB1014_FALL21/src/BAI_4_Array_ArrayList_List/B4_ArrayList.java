@@ -6,6 +6,7 @@
 package BAI_4_Array_ArrayList_List;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  *
@@ -74,7 +75,25 @@ public class B4_ArrayList {
     arrLstKhongDinhKieu.add(true);
     arrLstKhongDinhKieu.add('a');
     arrLstKhongDinhKieu.add(0, "abc");//Chèn giá trị vào index 0
+   
+    arrLstSoNguyen.add(7);
+    arrLstSoNguyen.add(2);
+    arrLstSoNguyen.add(9);
+    arrLstSoNguyen.add(5);
     
-  
+    //Phần 3:Truy xuất phần tử có trong danh sách với phương thức get(index);
+    System.out.println(arrLstKhongDinhKieu.get(0));
+    for (int i = 0; i < arrLstKhongDinhKieu.size(); i++) {//.size có kích thương List
+      System.out.println(arrLstKhongDinhKieu.get(i));
+    }
+    for (Integer x : arrLstSoNguyen) {
+      System.out.println(x);
+    }
+    
+    //Một vài ví dụ về phương thức
+    System.out.println(arrLstSoNguyen.isEmpty());
+    Collections.sort(arrLstSoNguyen);//Sắp xếp tăng dần
+    Collections.reverse(arrLstSoNguyen);//Đảo ngược danh sách lại
+    arrLstKhongDinhKieu.clear();//Xóa tất cả các phần tử danh sách
   }
 }
