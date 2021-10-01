@@ -22,15 +22,15 @@ public class Main {
     
     //Thử sử dụng class đối tượng cơ bản
     SinhVien sv1 = new SinhVien();
-    sv1.msv ="PH003";
-    sv1.ns = 2000;
-    sv1.nganh = "UDPM";
-    sv1.truong = "FPOLY";
+//    sv1.msv ="PH003";
+//    sv1.ns = 2000;
+//    sv1.nganh = "UDPM";
+//    sv1.truong = "FPOLY";
     SinhVien sv2 = new SinhVien();
-    sv2.msv ="PH004";
-    sv2.ns = 2000;
-    sv2.nganh = "UDPM";
-    sv2.truong = "FPOLY";
+//    sv2.msv ="PH004";
+//    sv2.ns = 2000;
+//    sv2.nganh = "UDPM";
+//    sv2.truong = "FPOLY";
     
   }
 }

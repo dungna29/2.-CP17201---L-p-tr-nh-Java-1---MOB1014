@@ -9,11 +9,12 @@ package BAI_5_OOP_LapTrinhHuongDoiTuong;
  *
  * @author Dungna89
  */
-public class SinhVien {
-  String msv;
-  int ns;
-  String truong;
-  String nganh;
+public class SinhVien {//Tên Class bắt buộc phải viết hoa chữ cái đầu củ từ
+  // Phần 1: Liệt kê tất cả các thuộc tính mà đối tượng cần
+  private String msv;//Khi private thì các thuộc tính chỉ được gọi bên trong class
+  private int ns;
+  private String truong;
+  private String nganh;
   
   void inThongTinSVRaManHinh(){
     
