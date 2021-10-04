@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author Dungna29
  */
 public class BAI_LAB1_2_3 {
-
+  
   /*
          * Bài tập ôn tập tổng hợp:
          * Viết 1 chương trình có menu sử dụng switch case và vòng lặp:

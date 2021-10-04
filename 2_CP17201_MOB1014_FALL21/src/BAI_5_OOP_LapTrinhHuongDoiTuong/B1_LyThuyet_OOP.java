@@ -64,8 +64,7 @@ public class B1_LyThuyet_OOP {
         - Attribute: Các thuộc tính của đối tượng
         - Phương thức:  Phương thức hay còn gọi là hàm thành viên
                         Một phương thức là một nhóm lệnh cùng nhau thực hiện một tác vụ
-        - Từ khóa this trong java là một biến tham chiếu được sử dụng để tham chiếu tới đối tượng của lớp hiện tại.
-       
+        - Từ khóa this trong java là một biến tham chiếu được sử dụng để tham chiếu tới đối tượng của lớp hiện tại.       
 
      */
     public static void main(String[] args) {
