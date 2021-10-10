@@ -74,11 +74,11 @@ public class HocSinhService {
   }
 
   public void timKiemHs() {
-  System.out.println("Mời bạn nhập mã: ");
+    System.out.println("Mời bạn nhập mã: ");
     _input = _sc.nextLine();
     for (int i = 0; i < _lstHs.size(); i++) {
       if (_lstHs.get(i).getMahs() == Integer.parseInt(_input)) {
-        System.out.println(_lstHs.get(i).toString());       
+        System.out.println(_lstHs.get(i).toString());
         return;
       }
     }
@@ -90,4 +90,28 @@ public class HocSinhService {
       System.out.println(x.toString());
     }
   }
+
+  //Ứng dụng phuowg thức trả về giúp lười hơn trong lập trình
+  public void addHs1() {  
+    _input = getInput("Số lượng");
+    for (int i = 0; i < Integer.parseInt(_input); i++) {      
+      _lstHs.add(new HocSinh(getInput("Tên"), Integer.parseInt(getInput("Cấp học")), Integer.parseInt(getInput("mã hs")), getInput("lớp")));
+    }
+  }
+  public String getInput(String msg){
+     System.out.printf("Mời bạn nhập %s: ",msg);
+     return _sc.nextLine();
+  }
+  public void timKiemHs3() {
+   System.out.println(_lstHs.get(getIndex(getInput("mã hs"))).toString());
+  }
+  public int getIndex(String mhs){
+     for (int i = 0; i < _lstHs.size(); i++) {
+      if (_lstHs.get(i).getMahs() == Integer.parseInt(_input)) {     
+        return i;
+      }
+    }
+     return -1;
+  }
+
 }
