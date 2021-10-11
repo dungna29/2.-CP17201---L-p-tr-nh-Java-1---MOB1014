@@ -15,7 +15,7 @@ public class S1_XuLyChuoi {
         // Ký tự đặc biệt \t = t\tab  \r = về đầu dòng  \n xuống dòng \\ = \  \" = "
         System.out.print("\t+ Họ và tên: Kiên\r\n\t+ Tuổi: 19");
         System.out.println("");
-
+     
         String name = "      Fpt POLY 2020        ";
 
         //toLowerCase () //Cho hết về chữ thường
