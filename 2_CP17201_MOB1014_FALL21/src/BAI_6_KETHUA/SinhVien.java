@@ -59,7 +59,4 @@ public class SinhVien extends Nguoi{
    //Khi kế thừa thì phương thức kế thừa từ lớp cha sẽ được code lại
     System.out.println("Đây là phương thức lớp con kế thừa lớp cha đã chỉnh sửa");
   }
-
-  
-  
 }

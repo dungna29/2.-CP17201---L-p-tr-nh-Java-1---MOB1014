@@ -102,7 +102,7 @@ public class HocSinhService {
      System.out.printf("Mời bạn nhập %s: ",msg);
      return _sc.nextLine();
   }
-  public void timKiemHs3() {
+  public void timKiemHs3() {    
    System.out.println(_lstHs.get(getIndex(getInput("mã hs"))).toString());
   }
   public int getIndex(String mhs){
