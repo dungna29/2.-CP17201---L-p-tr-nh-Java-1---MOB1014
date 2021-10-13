@@ -11,7 +11,7 @@ import BAI_TAP_MAU_ARRAY_OOP.*;
  *
  * @author Dungna89
  */
-public class HocSinh {
+public class HocSinh implements Comparable<HocSinh>{
   private String ten;  
   private int capHoc;
   private int mahs;
@@ -62,5 +62,15 @@ public class HocSinh {
   @Override
   public String toString() {
     return "HocSinh{" + "ten=" + ten + ", capHoc=" + capHoc + ", mahs=" + mahs + ", lop=" + lop + '}';
+  }
+
+  @Override
+  public int compareTo(HocSinh o1) {
+   //      //return o1.getTen().compareTo(getTen());//Sắp xếp chuỗi ASC
+//      //return -o1.getTen().compareTo(getTen());//Sắp xếp chuỗi DES
+        if (o1.getMahs() > getMahs()) {
+          return 1;
+        }
+        return -1;
   }
 }

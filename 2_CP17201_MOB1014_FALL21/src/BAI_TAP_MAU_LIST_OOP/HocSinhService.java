@@ -7,6 +7,8 @@ package BAI_TAP_MAU_LIST_OOP;
 
 import BAI_TAP_MAU_ARRAY_OOP.*;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 import javax.sound.midi.SysexMessage;
@@ -92,26 +94,56 @@ public class HocSinhService {
   }
 
   //Ứng dụng phuowg thức trả về giúp lười hơn trong lập trình
-  public void addHs1() {  
+  public void addHs1() {
     _input = getInput("Số lượng");
-    for (int i = 0; i < Integer.parseInt(_input); i++) {      
+    for (int i = 0; i < Integer.parseInt(_input); i++) {
       _lstHs.add(new HocSinh(getInput("Tên"), Integer.parseInt(getInput("Cấp học")), Integer.parseInt(getInput("mã hs")), getInput("lớp")));
     }
   }
-  public String getInput(String msg){
-     System.out.printf("Mời bạn nhập %s: ",msg);
-     return _sc.nextLine();
+
+  public String getInput(String msg) {
+    System.out.printf("Mời bạn nhập %s: ", msg);
+    return _sc.nextLine();
   }
-  public void timKiemHs3() {    
-   System.out.println(_lstHs.get(getIndex(getInput("mã hs"))).toString());
+
+  public void timKiemHs3() {
+    System.out.println(_lstHs.get(getIndex(getInput("mã hs"))).toString());
   }
-  public int getIndex(String mhs){
-     for (int i = 0; i < _lstHs.size(); i++) {
-      if (_lstHs.get(i).getMahs() == Integer.parseInt(_input)) {     
+
+  public int getIndex(String mhs) {
+    for (int i = 0; i < _lstHs.size(); i++) {
+      if (_lstHs.get(i).getMahs() == Integer.parseInt(_input)) {
         return i;
       }
     }
-     return -1;
+    return -1;
   }
 
+  //Hướng dẫn sắp xếp đối tượng
+  public void sort(){
+    //Cách 1: Sử dụng Comparator
+//    Collections.sort(_lstHs, new Comparator<HocSinh>() {
+//      @Override
+//      public int compare(BAI_TAP_MAU_LIST_OOP.HocSinh o1, BAI_TAP_MAU_LIST_OOP.HocSinh o2) {
+//      //return o1.getTen().compareTo(o2.getTen());//Sắp xếp chuỗi ASC
+//      //return -o1.getTen().compareTo(o2.getTen());//Sắp xếp chuỗi DES
+//        if (o1.getMahs() > o2.getMahs()) {
+//          return 1;
+//        }
+//        return -1;
+//      }
+//    });
+    
+    //Cách 2: Sử dụng Comparable
+    Collections.sort(_lstHs);
+    
+     //Cách 3: Học thuộc lòng lambda
+    //_lstHs.sort((o1, o2) -> o1.getTen().compareTo(o2.getTen()));
+   
+    //Lambda expression for sorting theo điểm
+    //_lstHs.sort((HocSinh s1, HocSinh s2)->s1.getMahs()-s2.getMahs());  
+    
+     Collections.sort(_lstHs, Comparator.comparing(HocSinh::getMahs));//Cái này dễ thuộc nhất
+
+  }
 }
