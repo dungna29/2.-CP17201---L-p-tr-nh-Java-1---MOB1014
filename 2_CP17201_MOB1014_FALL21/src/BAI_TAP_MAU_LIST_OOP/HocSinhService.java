@@ -48,17 +48,19 @@ public class HocSinhService {
 
   }
 
-  public void suaHs() {
+  public void suaHs() {    
     System.out.println("Mời bạn nhập mã: ");
     _input = _sc.nextLine();
     for (int i = 0; i < _lstHs.size(); i++) {
       if (_lstHs.get(i).getMahs() == Integer.parseInt(_input)) {
         System.out.println("Mời bạn nhập tên cần sửa: ");
         _lstHs.get(i).setTen(_sc.nextLine());
-        System.out.println("Sửa thành công");
+        System.out.println("Sửa thành công");        
         return;
+       
       }
     }
+    
     System.out.println("Không tìm thấy hs bạn cần");
   }
 
@@ -80,7 +82,7 @@ public class HocSinhService {
     _input = _sc.nextLine();
     for (int i = 0; i < _lstHs.size(); i++) {
       if (_lstHs.get(i).getMahs() == Integer.parseInt(_input)) {
-        System.out.println(_lstHs.get(i).toString());
+        System.out.println(_lstHs.get(i).toString());    
         return;
       }
     }

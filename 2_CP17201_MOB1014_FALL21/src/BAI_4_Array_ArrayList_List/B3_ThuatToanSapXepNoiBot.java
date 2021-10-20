@@ -20,7 +20,7 @@ public class B3_ThuatToanSapXepNoiBot {
     //Sử dụng thuật toán
     //Giải thích từng bước chạy của thuật toán trên theo từng bước 3 bạn làm nhanh nhất + 1 điểm thẳng vào khi đi thi
     for (int i = 0; i < arrNumber.length - 1; i++) {
-      for (int j = i + 1; j < arrNumber.length; j++) {
+      for (int j = 0; j < arrNumber.length; j++) {
         if (arrNumber[i] > arrNumber[j]) {
           int temp = arrNumber[i];
           arrNumber[i] = arrNumber[j];
